@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"zhuangggggger.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="我在知识和杂事的海洋中溺水了。 准备将自己以前在有道云笔记中乱七八糟的笔记慢慢整理搬到这里，技术非技术均有。如果关于技术方面的理解有误，希望可以帮我指出，非常感谢。非技术也可以一起吹水交流，如果思想观念不一致，可以思想碰撞，请别人身攻击哈。">
+  <meta name="description" content="SOLID原则单一职责原则一个类或者模块应该有且只有一个改变的原因。   单一职责是分离关注点的结果，关注点分离的越准确，代码也就更加“高内聚，低耦合”，当业务需求变化时候，仅需修改业务关注点的模块，该需的改变是这个模块(类)变化的原因，其他模块稳定不受影响。关注点分离粒度越细，职责也就越单一。   如果仅从功能上看，功能组成的粒度几乎可以无限拆分，类似于宏观到微观。所以应该按业务关注点划分粒度，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于这里">
-<meta property="og:url" content="https://zhuangggggger.github.io/2021/07/04/%E5%85%B3%E4%BA%8E%E8%BF%99%E9%87%8C/index.html">
+<meta property="og:title" content="SOLID原则的一点理解">
+<meta property="og:url" content="https://zhuangggggger.github.io/2021/07/14/SOLID%E5%8E%9F%E5%88%99%E7%9A%84%E4%B8%80%E7%82%B9%E7%90%86%E8%A7%A3/index.html">
 <meta property="og:site_name" content="z&#39;log">
-<meta property="og:description" content="我在知识和杂事的海洋中溺水了。 准备将自己以前在有道云笔记中乱七八糟的笔记慢慢整理搬到这里，技术非技术均有。如果关于技术方面的理解有误，希望可以帮我指出，非常感谢。非技术也可以一起吹水交流，如果思想观念不一致，可以思想碰撞，请别人身攻击哈。">
+<meta property="og:description" content="SOLID原则单一职责原则一个类或者模块应该有且只有一个改变的原因。   单一职责是分离关注点的结果，关注点分离的越准确，代码也就更加“高内聚，低耦合”，当业务需求变化时候，仅需修改业务关注点的模块，该需的改变是这个模块(类)变化的原因，其他模块稳定不受影响。关注点分离粒度越细，职责也就越单一。   如果仅从功能上看，功能组成的粒度几乎可以无限拆分，类似于宏观到微观。所以应该按业务关注点划分粒度，">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-04T03:10:38.000Z">
-<meta property="article:modified_time" content="2021-07-17T07:52:37.701Z">
+<meta property="article:published_time" content="2021-07-14T13:54:48.000Z">
+<meta property="article:modified_time" content="2021-07-18T04:49:09.740Z">
 <meta property="article:author" content="zhuangggggger">
-<meta property="article:tag" content="碎碎念">
+<meta property="article:tag" content="软件设计原则">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://zhuangggggger.github.io/2021/07/04/%E5%85%B3%E4%BA%8E%E8%BF%99%E9%87%8C/">
+<link rel="canonical" href="https://zhuangggggger.github.io/2021/07/14/SOLID%E5%8E%9F%E5%88%99%E7%9A%84%E4%B8%80%E7%82%B9%E7%90%86%E8%A7%A3/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>关于这里 | z'log</title>
+  <title>SOLID原则的一点理解 | z'log</title>
   
 
 
@@ -165,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhuangggggger.github.io/2021/07/04/%E5%85%B3%E4%BA%8E%E8%BF%99%E9%87%8C/">
+    <link itemprop="mainEntityOfPage" href="https://zhuangggggger.github.io/2021/07/14/SOLID%E5%8E%9F%E5%88%99%E7%9A%84%E4%B8%80%E7%82%B9%E7%90%86%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -178,7 +178,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          关于这里
+          SOLID原则的一点理解
         </h1>
 
         <div class="post-meta">
@@ -188,14 +188,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-07-04 11:10:38" itemprop="dateCreated datePublished" datetime="2021-07-04T11:10:38+08:00">2021-07-04</time>
+              <time title="创建时间：2021-07-14 21:54:48" itemprop="dateCreated datePublished" datetime="2021-07-14T21:54:48+08:00">2021-07-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-17 15:52:37" itemprop="dateModified" datetime="2021-07-17T15:52:37+08:00">2021-07-17</time>
+                <time title="修改时间：2021-07-18 12:49:09" itemprop="dateModified" datetime="2021-07-18T12:49:09+08:00">2021-07-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -203,7 +203,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%97%B2%E8%81%8A/" itemprop="url" rel="index"><span itemprop="name">闲聊</span></a>
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
                 </span>
             </span>
 
@@ -218,8 +218,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>我在知识和杂事的海洋中溺水了。</p>
-<p>准备将自己以前在有道云笔记中乱七八糟的笔记慢慢整理搬到这里，技术非技术均有。如果关于技术方面的理解有误，希望可以帮我指出，非常感谢。非技术也可以一起吹水交流，如果思想观念不一致，可以思想碰撞，请别人身攻击哈。</p>
+        <h2 id="SOLID原则"><a href="#SOLID原则" class="headerlink" title="SOLID原则"></a>SOLID原则</h2><h3 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h3><p><em>一个类或者模块应该有且只有一个改变的原因。</em>  </p>
+<p>单一职责是分离关注点的结果，关注点分离的越准确，代码也就更加“高内聚，低耦合”，当业务需求变化时候，仅需修改业务关注点的模块，该需的改变是这个模块(类)变化的原因，其他模块稳定不受影响。关注点分离粒度越细，职责也就越单一。  </p>
+<p>如果仅从功能上看，功能组成的粒度几乎可以无限拆分，类似于宏观到微观。所以应该按业务关注点划分粒度，在业务可能变化点上做到单一职责，稳定的模块也就越多。例如OSI将计算机网络体系结构划分为七层,但实际常用却是TCP/IP四层模型，因为平时业务中四层模型已经可以满足大部分场景。</p>
+<h3 id="开放封闭原则"><a href="#开放封闭原则" class="headerlink" title="开放封闭原则"></a>开放封闭原则</h3><p><em>软件实体(类、模块、函数)应该对扩展开放，对修改封闭。</em>  </p>
+<p>通俗讲是，新的需求，不需要修改旧代码，仅增加新的代码。单一职责原则描述了模块（类）的定义封装准则，开放封闭原则需要考虑代码设计实现，留下扩展点，涉及多态、面向接口编程等。</p>
+<p>实践体会：<br>场景：监听不同主题的消息，处理不同的业务<br>实现：使用策略模式，定义不同消息主题模块，实现消息处理接口，使用工厂模式根据监听到消息主题创建不同的消息模块，利用多态运行相应的处理算法。<br>从消息代码结构上看已经留下了扩展点，新的主题由新定义的模块完成业务，但由于旧主题模块依赖的其中一个小模块职责不够单一，新的主题消息需要该模块部分逻辑变化。如果重新定义个模块完成新主题消息处理，存在部分代码逻辑重复，不太好。另一个方法是，重构该模块，将稳定部分和改变部分分离出来形成更小的模块。严格来说这样还是修改了旧代码，我们需要对重构后的模块进行测试，还是增加了工作量。如果我们一开始就将该模块职责定义的够单一，就可以避免这个问题。  </p>
+<blockquote>
+<p>这算不算违背开放封闭原则？可能理解不太准确，先记录下</p>
+</blockquote>
+<h3 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h3><p><em>客户（client）不应被迫使用对其而言无用的方法或功能。</em>  </p>
+<p>接口并非越全越好，仅暴露调用者需要的接口就好。避免调用者依赖无用接口而影响稳定性。</p>
+<p>实践体会：<br>从上往下编写代码，先写顶层模块实现，再编写依赖的模块。编写顶层代码时可以清晰感受到，我们需要哪些接口及怎样的接口才能优雅地去实现该逻辑。结合单一职责原则，在关注点分离准确的情况下，接口职责单一，避免后续需要拆分接口。如果是业务需要粗粒度接口，比如前端使用，可以利用门面模式组合细粒度接口，减少请求次数。也可以通过接口隔离原则反过来判断接口是否符合单一职责原则，如果调用者仅需用部分接口，说明提供该组接口的模块不够单一；如果调用者仅使用该接口部分功能，说明该接口职责不够单一。</p>
+<h3 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h3><p><em>1.高层次的模块不应该依赖于低层次的模块，两者都应该依赖于抽象接口。</em><br><em>2.抽象接口不应该依赖于具体实现。而具体实现则应该依赖于抽象接口。</em>  </p>
+<p>通过抽象接口将高层模块和低层模块解耦，高层模块调用抽象接口，低层模块实现抽象接口。抽象接口的定义不应该根据模块实现方法定义，而是模块需要实现(或使用)该抽象接口。</p>
+<p>实践体会：<br>依赖倒置好处在于低层模块变化时，仅需注入抽象接口依赖的新模块，高层模块无需任何改动。例如低层模块为db且要更换db时；低层模块为其他服务接口，单元测试时可mock该接口，返回期望的数据。</p>
+<h3 id="里氏替换替换原则"><a href="#里氏替换替换原则" class="headerlink" title="里氏替换替换原则"></a>里氏替换替换原则</h3><p><em>派生类（子类）对象可以在程序中代替其基类（超类）对象。</em>  </p>
+<p>里氏替换替换原则要求子类型需要满足替换父类型而功能不变。也就是说子类型尽量只做扩展，避免修改父类型，如需重写父类型方法，需遵守父类型约束，保证功能不变。  </p>
+<blockquote>
+<p>疑问：里氏替换替换原则是否适合鸭子类型？<br>项目中遇到一种情况，由于架构和业务的变化，原有的消息收发接口需要根据key做消息转发功能。改动思路为构建新消息模块内嵌原有消息模块，重写接受消息接口增加转发功能（golang实现）。业务层稳定无需改变，仅需注入新依赖的模块，也没有改写旧代码。<br>golang中没有继承概念，如果内嵌可以看着继承，那么这个新模块并不满足里氏替换替换原则，原有的接口功能已重写，单元测试也无法通过。内嵌只是为了语法方便，组合也可以完成。保留疑问，后续有新的理解再更新。</p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>没有总结，继续修行。</p>
 
     </div>
 
@@ -229,7 +248,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" rel="tag"># 碎碎念</a>
+              <a href="/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" rel="tag"># 软件设计原则</a>
           </div>
 
         
@@ -238,12 +257,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/07/03/%E5%85%B3%E4%BA%8EContext(%E4%B8%8A%E4%B8%8B%E6%96%87)%E7%9A%84%E7%90%86%E8%A7%A3/" rel="prev" title="关于Context(上下文)的理解">
-      <i class="fa fa-chevron-left"></i> 关于Context(上下文)的理解
+    <a href="/2021/07/06/%E7%BC%93%E5%AD%98%E6%9B%B4%E6%96%B0%E7%AD%96%E7%95%A5/" rel="prev" title="缓存更新策略">
+      <i class="fa fa-chevron-left"></i> 缓存更新策略
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/07/05/%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B2%BE%E5%BA%A6%E6%8D%9F%E5%A4%B1%E5%92%8C%E8%8C%83%E5%9B%B4/" rel="next" title="浮点数精度损失和范围">
-      浮点数精度损失和范围 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/07/15/%E6%99%B6%E6%8C%AF%E5%92%8C%E9%94%81%E7%9B%B8%E7%8E%AF/" rel="next" title="晶振和锁相环">
+      晶振和锁相环 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -304,6 +323,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SOLID%E5%8E%9F%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">SOLID原则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99"><span class="nav-number">1.1.</span> <span class="nav-text">单一职责原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%94%BE%E5%B0%81%E9%97%AD%E5%8E%9F%E5%88%99"><span class="nav-number">1.2.</span> <span class="nav-text">开放封闭原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99"><span class="nav-number">1.3.</span> <span class="nav-text">接口隔离原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99"><span class="nav-number">1.4.</span> <span class="nav-text">依赖倒置原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99"><span class="nav-number">1.5.</span> <span class="nav-text">里氏替换替换原则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -432,7 +452,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'zhuangggggger.github.io',
       owner       : 'zhuangggggger',
       admin       : ['zhuangggggger'],
-      id          : '2dec03ae3be70190531e1576096ba4a9',
+      id          : 'd70240aec88e738d4672c37a13e80cb5',
         language: 'zh-CN',
       distractionFreeMode: true
     });
